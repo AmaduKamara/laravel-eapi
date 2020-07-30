@@ -3,12 +3,11 @@
 namespace App\Model;
 
 use Illuminate\Database\Eloquent\Model;
-
-// use Illuminate\Support\Facades\Review;
+use App\Model\Review;
 
 class Product extends Model
 {
-    // public function review(){
-    //     return $this->hasMany(Review::class);
-    // }
+    public function reviews(){
+        return $this->hasMany(Review::class);
+    }
 }
